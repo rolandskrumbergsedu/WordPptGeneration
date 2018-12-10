@@ -17,7 +17,7 @@ namespace WordDocumentGeneration.API
             {
                 var documentManager = new WordDocumentManager();
 
-                var bytes = documentManager.GetDocument(new GenerationData());
+                var bytes = documentManager.GetDocument(GetGenerationData());
 
                 var result = Request.CreateResponse(HttpStatusCode.OK);
                 result.Content = new ByteArrayContent(bytes);
@@ -32,6 +32,19 @@ namespace WordDocumentGeneration.API
             {
                 return Request.CreateResponse(HttpStatusCode.Gone);
             }
+        }
+
+        private static GenerationData GetGenerationData()
+        {
+            return new GenerationData
+            {
+                TitleArea = new TitleArea
+                {
+                    Date = "December 2018",
+                    Name = "Rolands Krumbergs",
+                    Title = "Confidential candidate CV"
+                }
+            };
         }
     }
 }
