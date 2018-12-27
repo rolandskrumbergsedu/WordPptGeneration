@@ -105,6 +105,7 @@
     <Compile Include="ContentHelper\ContentTable2.cs" />
     <Compile Include="ContentHelper\ContentTable3.cs" />
     <Compile Include="ContentHelper\ContentTable4.cs" />
+    <Compile Include="ContentHelper\ContentTable5.cs" />
     <Compile Include="GenerationData.cs" />
     <Compile Include="Helpers\Class1.cs" />
     <Compile Include="Helpers\CustomFilePropertiesPartHelper.cs" />
