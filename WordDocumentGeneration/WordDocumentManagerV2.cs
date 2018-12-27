@@ -52,7 +52,7 @@ namespace WordDocumentGeneration
             //ExtendedFilePropertiesPartHelper.GenerateExtendedFilePropertiesPart1Content(extendedFilePropertiesPart1);
 
             var mainDocumentPart1 = document.AddMainDocumentPart();
-            MainDocumentHelper.GenerateMainDocumentPart1Content(mainDocumentPart1);
+            MainDocumentPartHelper.GenerateMainDocumentPart1Content(mainDocumentPart1);
 
             var endnotesPart1 = mainDocumentPart1.AddNewPart<EndnotesPart>("rId8");
             EndnotesPartHelper.GenerateEndnotesPart1Content(endnotesPart1);

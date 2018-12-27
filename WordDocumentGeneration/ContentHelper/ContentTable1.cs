@@ -5,7 +5,7 @@ using A = DocumentFormat.OpenXml.Drawing;
 using Pic = DocumentFormat.OpenXml.Drawing.Pictures;
 using A14 = DocumentFormat.OpenXml.Office2010.Drawing;
 
-namespace GeneratedCode.ContentHelper
+namespace WordDocumentGeneration.ContentHelper
 {
     public static class ContentTable1
     {

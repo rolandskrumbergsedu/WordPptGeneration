@@ -6,7 +6,7 @@ using Pic = DocumentFormat.OpenXml.Drawing.Pictures;
 using A14 = DocumentFormat.OpenXml.Office2010.Drawing;
 using Wp14 = DocumentFormat.OpenXml.Office2010.Word.Drawing;
 
-namespace GeneratedCode
+namespace WordDocumentGeneration.ContentHelper
 {
     public static class ContentTable3
     {

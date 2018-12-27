@@ -1,7 +1,7 @@
 ﻿using DocumentFormat.OpenXml.Wordprocessing;
 using DocumentFormat.OpenXml;
 
-namespace GeneratedCode
+namespace WordDocumentGeneration.ContentHelper
 {
     public static class ContentTable2
     {
