@@ -1,12 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DocumentFormat.OpenXml.Wordprocessing;
+using DocumentFormat.OpenXml;
 
 namespace WordDocumentGeneration.ContentHelper
 {
-    class ContentParagraph14
+    public static class ContentParagraph14
     {
+        // Creates an Paragraph instance and adds its children.
+        public static Paragraph GenerateParagraph()
+        {
+            Paragraph paragraph1 = new Paragraph() { RsidParagraphAddition = "009B2C1D", RsidRunAdditionDefault = "009B2C1D", ParagraphId = "506DCCCF", TextId = "77777777" };
+            return paragraph1;
+        }
+
+
     }
 }

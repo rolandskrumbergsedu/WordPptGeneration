@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DocumentFormat.OpenXml.Wordprocessing;
 using DocumentFormat.OpenXml.Packaging;
 using WordDocumentGeneration.ContentHelper;
 
@@ -32,20 +28,20 @@ namespace WordDocumentGeneration.Helpers
             body1.Append(ContentParagraph7.GenerateParagraph());
             body1.Append(ContentParagraph8.GenerateParagraph());
             body1.Append(ContentTable6.GenerateTable());
-            body1.Append(paragraph124);
-            body1.Append(paragraph125);
-            body1.Append(paragraph126);
-            body1.Append(table8);
-            body1.Append(paragraph255);
-            body1.Append(table9);
-            body1.Append(paragraph261);
-            body1.Append(table10);
-            body1.Append(paragraph267);
-            body1.Append(table11);
-            body1.Append(paragraph271);
-            body1.Append(table12);
-            body1.Append(paragraph276);
-            body1.Append(paragraph277);
+            body1.Append(ContentParagraph9.GenerateParagraph());
+            body1.Append(ContentParagraph10.GenerateParagraph());
+            body1.Append(ContentParagraph11.GenerateParagraph());
+            body1.Append(ContentTable7.GenerateTable());
+            body1.Append(ContentParagraph12.GenerateParagraph());
+            body1.Append(ContentTable8.GenerateTable());
+            body1.Append(ContentParagraph13.GenerateParagraph());
+            body1.Append(ContentTable9.GenerateTable());
+            body1.Append(ContentParagraph14.GenerateParagraph());
+            body1.Append(ContentTable10.GenerateTable());
+            body1.Append(ContentParagraph15.GenerateParagraph());
+            body1.Append(ContentTable11.GenerateTable());
+            body1.Append(ContentParagraph16.GenerateParagraph());
+            body1.Append(ContentParagraph17.GenerateParagraph());
             body1.Append(sectionProperties1);
 
             document1.Append(body1);
