@@ -7,22 +7,9 @@ namespace WordDocumentGeneration.Tests
     public class TestSimpleGeneration
     {
         [TestMethod]
-        public void Test_FileStoring()
-        {
-            var documentManager = new WordDocumentManager();
-
-            var simpleFile = new GenerationData();
-
-            var filePath = "C:\\temp\\WordGeneration";
-            var fileName = $"{Guid.NewGuid().ToString()}.docx";
-
-            documentManager.SaveDocument(simpleFile, filePath, fileName);
-        }
-
-        [TestMethod]
         public void Test_FileStoring_TestRealData()
         {
-            var documentManager = new WordDocumentManager();
+            var documentManager = new WordDocumentManagerV2();
 
             var simpleFile = GetGenerationData();
 
@@ -36,6 +23,15 @@ namespace WordDocumentGeneration.Tests
         {
             return new GenerationData
             {
+                DocumentProperties = new DocumentProperties
+                {
+                  Creator  = "Agnese Zanriba",
+                  Category = "",
+                  Keywords = "",
+                  Subject = "",
+                  Description = "",
+                  Title = ""
+                },
                 TitleArea = new TitleArea
                 {
                     Date = "December 2018",
