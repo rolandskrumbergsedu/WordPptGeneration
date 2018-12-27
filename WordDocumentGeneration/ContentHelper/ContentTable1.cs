@@ -7,10 +7,10 @@ using A14 = DocumentFormat.OpenXml.Office2010.Drawing;
 
 namespace GeneratedCode.ContentHelper
 {
-    public class ContentTable1
+    public static class ContentTable1
     {
         // Creates an Table instance and adds its children.
-        public Table GenerateTable()
+        public static Table GenerateTable()
         {
             Table table1 = new Table();
 
@@ -521,7 +521,5 @@ namespace GeneratedCode.ContentHelper
             table1.Append(tableRow6);
             return table1;
         }
-
-
     }
 }

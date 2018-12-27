@@ -102,6 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContentHelper\ContentTable1.cs" />
+    <Compile Include="ContentHelper\ContentTable2.cs" />
     <Compile Include="GenerationData.cs" />
     <Compile Include="Helpers\Class1.cs" />
     <Compile Include="Helpers\CustomFilePropertiesPartHelper.cs" />
