@@ -10,7 +10,7 @@ namespace WordDocumentGeneration.ContentHelper
     public static class ContentTable1
     {
         // Creates an Table instance and adds its children.
-        public static Table GenerateTable()
+        public static Table GenerateTable(GenerationData data)
         {
             Table table1 = new Table();
 
@@ -396,7 +396,7 @@ namespace WordDocumentGeneration.ContentHelper
             runProperties3.Append(fontSize2);
             runProperties3.Append(fontSizeComplexScript2);
             Text text2 = new Text();
-            text2.Text = "Name Surname";
+            text2.Text = data.TitleArea.Name;
 
             run3.Append(runProperties3);
             run3.Append(text2);
@@ -424,7 +424,7 @@ namespace WordDocumentGeneration.ContentHelper
             runProperties4.Append(fontSize3);
             runProperties4.Append(fontSizeComplexScript3);
             Text text3 = new Text();
-            text3.Text = "November 2018";
+            text3.Text = data.TitleArea.Date;
 
             run4.Append(runProperties4);
             run4.Append(text3);

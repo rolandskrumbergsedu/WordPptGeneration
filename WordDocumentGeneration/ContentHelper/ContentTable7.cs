@@ -335,37 +335,37 @@ namespace WordDocumentGeneration.ContentHelper
             paragraphProperties4.Append(spacingBetweenLines4);
             paragraphProperties4.Append(indentation3);
 
-            Run run7 = new Run();
+            //Run run7 = new Run();
 
-            RunProperties runProperties7 = new RunProperties();
-            RunFonts runFonts1 = new RunFonts() { Ascii = "Wingdings", HighAnsi = "Wingdings", EastAsia = "Wingdings", ComplexScript = "Wingdings" };
-            FontSize fontSize7 = new FontSize() { Val = "14" };
-            FontSizeComplexScript fontSizeComplexScript7 = new FontSizeComplexScript() { Val = "14" };
+            //RunProperties runProperties7 = new RunProperties();
+            //RunFonts runFonts1 = new RunFonts() { Ascii = "Wingdings", HighAnsi = "Wingdings", EastAsia = "Wingdings", ComplexScript = "Wingdings" };
+            //FontSize fontSize7 = new FontSize() { Val = "14" };
+            //FontSizeComplexScript fontSizeComplexScript7 = new FontSizeComplexScript() { Val = "14" };
 
-            runProperties7.Append(runFonts1);
-            runProperties7.Append(fontSize7);
-            runProperties7.Append(fontSizeComplexScript7);
-            Text text7 = new Text();
-            text7.Text = "l";
+            //runProperties7.Append(runFonts1);
+            //runProperties7.Append(fontSize7);
+            //runProperties7.Append(fontSizeComplexScript7);
+            //Text text7 = new Text();
+            //text7.Text = "l";
 
-            run7.Append(runProperties7);
-            run7.Append(text7);
+            //run7.Append(runProperties7);
+            //run7.Append(text7);
 
-            Run run8 = new Run();
+            //Run run8 = new Run();
 
-            RunProperties runProperties8 = new RunProperties();
-            RunFonts runFonts2 = new RunFonts() { Ascii = "Wingdings", HighAnsi = "Wingdings", EastAsia = "Wingdings", ComplexScript = "Wingdings" };
-            FontSize fontSize8 = new FontSize() { Val = "14" };
-            FontSizeComplexScript fontSizeComplexScript8 = new FontSizeComplexScript() { Val = "14" };
+            //RunProperties runProperties8 = new RunProperties();
+            //RunFonts runFonts2 = new RunFonts() { Ascii = "Wingdings", HighAnsi = "Wingdings", EastAsia = "Wingdings", ComplexScript = "Wingdings" };
+            //FontSize fontSize8 = new FontSize() { Val = "14" };
+            //FontSizeComplexScript fontSizeComplexScript8 = new FontSizeComplexScript() { Val = "14" };
 
-            runProperties8.Append(runFonts2);
-            runProperties8.Append(fontSize8);
-            runProperties8.Append(fontSizeComplexScript8);
-            Text text8 = new Text();
-            text8.Text = " ";
+            //runProperties8.Append(runFonts2);
+            //runProperties8.Append(fontSize8);
+            //runProperties8.Append(fontSizeComplexScript8);
+            //Text text8 = new Text();
+            //text8.Text = " ";
 
-            run8.Append(runProperties8);
-            run8.Append(text8);
+            //run8.Append(runProperties8);
+            //run8.Append(text8);
 
             Run run9 = new Run();
 
@@ -381,9 +381,18 @@ namespace WordDocumentGeneration.ContentHelper
             run9.Append(runProperties9);
             run9.Append(text9);
 
+            NumberingProperties numberingProperties1 = new NumberingProperties();
+            NumberingLevelReference numberingLevelReference1 = new NumberingLevelReference() { Val = 0 };
+            NumberingId numberingId1 = new NumberingId() { Val = 1 };
+
+            numberingProperties1.Append(numberingLevelReference1);
+            numberingProperties1.Append(numberingId1);
+
+            paragraph6.Append(numberingProperties1);
+
             paragraph6.Append(paragraphProperties4);
-            paragraph6.Append(run7);
-            paragraph6.Append(run8);
+            //paragraph6.Append(run7);
+            //paragraph6.Append(run8);
             paragraph6.Append(run9);
 
             Paragraph paragraph7 = new Paragraph() { RsidParagraphAddition = "009B2C1D", RsidParagraphProperties = "009E39C2", RsidRunAdditionDefault = "009E39C2", ParagraphId = "7C6FBD2C", TextId = "77777777" };

@@ -143,6 +143,7 @@
     <Compile Include="Helpers\HeaderPartHelper.cs" />
     <Compile Include="Helpers\ImagePartHelper.cs" />
     <Compile Include="Helpers\MainDocumentPartHelper.cs" />
+    <Compile Include="Helpers\NumberingDefinitionsPartHelper.cs" />
     <Compile Include="Helpers\StyleDefinitionsPartHelper.cs" />
     <Compile Include="Helpers\ThemePartHelper.cs" />
     <Compile Include="Helpers\WebSettingsPartHelper.cs" />

@@ -52,7 +52,7 @@ namespace WordDocumentGeneration
             //ExtendedFilePropertiesPartHelper.GenerateExtendedFilePropertiesPart1Content(extendedFilePropertiesPart1);
 
             var mainDocumentPart1 = document.AddMainDocumentPart();
-            MainDocumentPartHelper.GenerateMainDocumentPart1Content(mainDocumentPart1);
+            MainDocumentPartHelper.GenerateMainDocumentPart1Content(mainDocumentPart1, data);
 
             var endnotesPart1 = mainDocumentPart1.AddNewPart<EndnotesPart>("rId8");
             EndnotesPartHelper.GenerateEndnotesPart1Content(endnotesPart1);
@@ -77,6 +77,9 @@ namespace WordDocumentGeneration
 
             var customXmlPropertiesPart2 = customXmlPart2.AddNewPart<CustomXmlPropertiesPart>("rId1");
             CustomXmlPartHelper.GenerateCustomXmlPropertiesPart2Content(customXmlPropertiesPart2);
+
+            var numberingDefinitionsPart1 = mainDocumentPart1.AddNewPart<NumberingDefinitionsPart>("rId20");
+            NumberingDefinitionsPartHelper.GenerateNumberingDefinitionsPart1Content(numberingDefinitionsPart1);
 
             var themePart1 = mainDocumentPart1.AddNewPart<ThemePart>("rId16");
             ThemePartHelper.GenerateThemePart1Content(themePart1);

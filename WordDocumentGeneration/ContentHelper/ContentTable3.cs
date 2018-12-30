@@ -11,7 +11,7 @@ namespace WordDocumentGeneration.ContentHelper
     public static class ContentTable3
     {
         // Creates an Table instance and adds its children.
-        public static Table GenerateTable()
+        public static Table GenerateTable(GenerationData data)
         {
             Table table1 = new Table();
 
@@ -205,7 +205,7 @@ namespace WordDocumentGeneration.ContentHelper
             runProperties4.Append(fontSize4);
             runProperties4.Append(fontSizeComplexScript4);
             Text text4 = new Text();
-            text4.Text = "Name Surname";
+            text4.Text = data.Personal.Name + " " + data.Personal.Surname;
 
             run4.Append(runProperties4);
             run4.Append(text4);
@@ -216,47 +216,47 @@ namespace WordDocumentGeneration.ContentHelper
             tableCell3.Append(tableCellProperties3);
             tableCell3.Append(paragraph3);
 
-            TableCell tableCell4 = new TableCell();
+            //TableCell tableCell4 = new TableCell();
 
-            TableCellProperties tableCellProperties4 = new TableCellProperties();
-            TableCellWidth tableCellWidth4 = new TableCellWidth() { Width = "800", Type = TableWidthUnitValues.Dxa };
+            //TableCellProperties tableCellProperties4 = new TableCellProperties();
+            //TableCellWidth tableCellWidth4 = new TableCellWidth() { Width = "800", Type = TableWidthUnitValues.Dxa };
 
-            TableCellBorders tableCellBorders4 = new TableCellBorders();
-            TopBorder topBorder5 = new TopBorder() { Val = BorderValues.Single, Color = "FFFFFF", Size = (UInt32Value)0U, Space = (UInt32Value)0U };
-            LeftBorder leftBorder5 = new LeftBorder() { Val = BorderValues.Single, Color = "FFFFFF", Size = (UInt32Value)0U, Space = (UInt32Value)0U };
-            BottomBorder bottomBorder5 = new BottomBorder() { Val = BorderValues.Single, Color = "FFFFFF", Size = (UInt32Value)0U, Space = (UInt32Value)0U };
-            RightBorder rightBorder5 = new RightBorder() { Val = BorderValues.Single, Color = "FFFFFF", Size = (UInt32Value)0U, Space = (UInt32Value)0U };
+            //TableCellBorders tableCellBorders4 = new TableCellBorders();
+            //TopBorder topBorder5 = new TopBorder() { Val = BorderValues.Single, Color = "FFFFFF", Size = (UInt32Value)0U, Space = (UInt32Value)0U };
+            //LeftBorder leftBorder5 = new LeftBorder() { Val = BorderValues.Single, Color = "FFFFFF", Size = (UInt32Value)0U, Space = (UInt32Value)0U };
+            //BottomBorder bottomBorder5 = new BottomBorder() { Val = BorderValues.Single, Color = "FFFFFF", Size = (UInt32Value)0U, Space = (UInt32Value)0U };
+            //RightBorder rightBorder5 = new RightBorder() { Val = BorderValues.Single, Color = "FFFFFF", Size = (UInt32Value)0U, Space = (UInt32Value)0U };
 
-            tableCellBorders4.Append(topBorder5);
-            tableCellBorders4.Append(leftBorder5);
-            tableCellBorders4.Append(bottomBorder5);
-            tableCellBorders4.Append(rightBorder5);
+            //tableCellBorders4.Append(topBorder5);
+            //tableCellBorders4.Append(leftBorder5);
+            //tableCellBorders4.Append(bottomBorder5);
+            //tableCellBorders4.Append(rightBorder5);
 
-            tableCellProperties4.Append(tableCellWidth4);
-            tableCellProperties4.Append(tableCellBorders4);
+            //tableCellProperties4.Append(tableCellWidth4);
+            //tableCellProperties4.Append(tableCellBorders4);
 
-            Paragraph paragraph4 = new Paragraph() { RsidParagraphAddition = "009B2C1D", RsidRunAdditionDefault = "0007641E", ParagraphId = "302E89FF", TextId = "3481D71C" };
+            //Paragraph paragraph4 = new Paragraph() { RsidParagraphAddition = "009B2C1D", RsidRunAdditionDefault = "0007641E", ParagraphId = "302E89FF", TextId = "3481D71C" };
 
-            Run run5 = new Run();
+            //Run run5 = new Run();
 
-            RunProperties runProperties5 = new RunProperties();
-            NoProof noProof1 = new NoProof();
+            //RunProperties runProperties5 = new RunProperties();
+            //NoProof noProof1 = new NoProof();
 
-            runProperties5.Append(noProof1);
-            Text text5 = new Text();
-            text5.Text = "x";
+            //runProperties5.Append(noProof1);
+            //Text text5 = new Text();
+            //text5.Text = "x";
 
-            run5.Append(runProperties5);
-            run5.Append(text5);
+            //run5.Append(runProperties5);
+            //run5.Append(text5);
 
-            paragraph4.Append(run5);
+            //paragraph4.Append(run5);
 
-            tableCell4.Append(tableCellProperties4);
-            tableCell4.Append(paragraph4);
+            //tableCell4.Append(tableCellProperties4);
+            //tableCell4.Append(paragraph4);
 
             tableRow2.Append(tableCell2);
             tableRow2.Append(tableCell3);
-            tableRow2.Append(tableCell4);
+            //tableRow2.Append(tableCell4);
 
             TableRow tableRow3 = new TableRow() { RsidTableRowAddition = "009B2C1D", ParagraphId = "28972EE0", TextId = "77777777" };
 
@@ -344,7 +344,7 @@ namespace WordDocumentGeneration.ContentHelper
             runProperties7.Append(fontSize6);
             runProperties7.Append(fontSizeComplexScript6);
             Text text7 = new Text();
-            text7.Text = "Riga, Latvia";
+            text7.Text = data.Personal.Address;
 
             run7.Append(runProperties7);
             run7.Append(text7);
@@ -445,7 +445,7 @@ namespace WordDocumentGeneration.ContentHelper
             runProperties9.Append(fontSize8);
             runProperties9.Append(fontSizeComplexScript8);
             Text text9 = new Text() { Space = SpaceProcessingModeValues.Preserve };
-            text9.Text = "+371 ";
+            text9.Text = data.Personal.Mobile;
 
             run9.Append(runProperties9);
             run9.Append(text9);
@@ -552,19 +552,19 @@ namespace WordDocumentGeneration.ContentHelper
             paragraphProperties4.Append(spacingBetweenLines4);
             paragraphProperties4.Append(indentation4);
 
-            Run run12 = new Run();
+            //Run run12 = new Run();
 
-            RunProperties runProperties12 = new RunProperties();
-            FontSize fontSize11 = new FontSize() { Val = "21" };
-            FontSizeComplexScript fontSizeComplexScript11 = new FontSizeComplexScript() { Val = "21" };
+            //RunProperties runProperties12 = new RunProperties();
+            //FontSize fontSize11 = new FontSize() { Val = "21" };
+            //FontSizeComplexScript fontSizeComplexScript11 = new FontSizeComplexScript() { Val = "21" };
 
-            runProperties12.Append(fontSize11);
-            runProperties12.Append(fontSizeComplexScript11);
-            Text text12 = new Text();
-            text12.Text = "xx";
+            //runProperties12.Append(fontSize11);
+            //runProperties12.Append(fontSizeComplexScript11);
+            //Text text12 = new Text();
+            //text12.Text = data.Personal.Email;
 
-            run12.Append(runProperties12);
-            run12.Append(text12);
+            //run12.Append(runProperties12);
+            //run12.Append(text12);
 
             Run run13 = new Run() { RsidRunAddition = "009E39C2" };
 
@@ -575,13 +575,13 @@ namespace WordDocumentGeneration.ContentHelper
             runProperties13.Append(fontSize12);
             runProperties13.Append(fontSizeComplexScript12);
             Text text13 = new Text();
-            text13.Text = "@gmail.com";
+            text13.Text = data.Personal.Email;
 
             run13.Append(runProperties13);
             run13.Append(text13);
 
             paragraph10.Append(paragraphProperties4);
-            paragraph10.Append(run12);
+            //paragraph10.Append(run12);
             paragraph10.Append(run13);
 
             tableCell10.Append(tableCellProperties10);
@@ -668,34 +668,34 @@ namespace WordDocumentGeneration.ContentHelper
             paragraphProperties5.Append(spacingBetweenLines5);
             paragraphProperties5.Append(indentation5);
 
-            Run run15 = new Run();
+            //Run run15 = new Run();
 
-            RunProperties runProperties15 = new RunProperties();
-            FontSize fontSize14 = new FontSize() { Val = "22" };
-            FontSizeComplexScript fontSizeComplexScript14 = new FontSizeComplexScript() { Val = "22" };
+            //RunProperties runProperties15 = new RunProperties();
+            //FontSize fontSize14 = new FontSize() { Val = "22" };
+            //FontSizeComplexScript fontSizeComplexScript14 = new FontSizeComplexScript() { Val = "22" };
 
-            runProperties15.Append(fontSize14);
-            runProperties15.Append(fontSizeComplexScript14);
-            Text text15 = new Text() { Space = SpaceProcessingModeValues.Preserve };
-            text15.Text = " ";
+            //runProperties15.Append(fontSize14);
+            //runProperties15.Append(fontSizeComplexScript14);
+            //Text text15 = new Text() { Space = SpaceProcessingModeValues.Preserve };
+            //text15.Text = " ";
 
-            run15.Append(runProperties15);
-            run15.Append(text15);
-            ProofError proofError1 = new ProofError() { Type = ProofingErrorValues.SpellStart };
+            //run15.Append(runProperties15);
+            //run15.Append(text15);
+            //ProofError proofError1 = new ProofError() { Type = ProofingErrorValues.SpellStart };
 
-            Run run16 = new Run();
+            //Run run16 = new Run();
 
-            RunProperties runProperties16 = new RunProperties();
-            FontSize fontSize15 = new FontSize() { Val = "22" };
-            FontSizeComplexScript fontSizeComplexScript15 = new FontSizeComplexScript() { Val = "22" };
+            //RunProperties runProperties16 = new RunProperties();
+            //FontSize fontSize15 = new FontSize() { Val = "22" };
+            //FontSizeComplexScript fontSizeComplexScript15 = new FontSizeComplexScript() { Val = "22" };
 
-            runProperties16.Append(fontSize15);
-            runProperties16.Append(fontSizeComplexScript15);
-            Text text16 = new Text();
-            text16.Text = "a";
+            //runProperties16.Append(fontSize15);
+            //runProperties16.Append(fontSizeComplexScript15);
+            //Text text16 = new Text();
+            //text16.Text = "a";
 
-            run16.Append(runProperties16);
-            run16.Append(text16);
+            //run16.Append(runProperties16);
+            //run16.Append(text16);
 
             Run run17 = new Run() { RsidRunAddition = "0007641E" };
 
@@ -706,11 +706,11 @@ namespace WordDocumentGeneration.ContentHelper
             runProperties17.Append(fontSize16);
             runProperties17.Append(fontSizeComplexScript16);
             Text text17 = new Text();
-            text17.Text = "xx";
+            text17.Text = data.Personal.Skype;
 
             run17.Append(runProperties17);
             run17.Append(text17);
-            ProofError proofError2 = new ProofError() { Type = ProofingErrorValues.SpellEnd };
+            //ProofError proofError2 = new ProofError() { Type = ProofingErrorValues.SpellEnd };
 
             Run run18 = new Run();
 
@@ -727,11 +727,11 @@ namespace WordDocumentGeneration.ContentHelper
             run18.Append(text18);
 
             paragraph12.Append(paragraphProperties5);
-            paragraph12.Append(run15);
-            paragraph12.Append(proofError1);
-            paragraph12.Append(run16);
+            //paragraph12.Append(run15);
+            //paragraph12.Append(proofError1);
+            //paragraph12.Append(run16);
             paragraph12.Append(run17);
-            paragraph12.Append(proofError2);
+            //paragraph12.Append(proofError2);
             paragraph12.Append(run18);
 
             tableCell12.Append(tableCellProperties12);
@@ -949,6 +949,22 @@ namespace WordDocumentGeneration.ContentHelper
             run20.Append(drawing1);
 
             paragraph14.Append(run20);
+
+            Run run21 = new Run() { RsidRunAddition = "0007641E" };
+
+            RunProperties runProperties21 = new RunProperties();
+            FontSize fontSize21 = new FontSize() { Val = "22" };
+            FontSizeComplexScript fontSizeComplexScript21 = new FontSizeComplexScript() { Val = "22" };
+
+            runProperties21.Append(fontSize21);
+            runProperties21.Append(fontSizeComplexScript21);
+            Text text21 = new Text();
+            text21.Text = data.Personal.LinkedIn;
+
+            run21.Append(runProperties21);
+            run21.Append(text21);
+
+            paragraph14.Append(run21);
 
             tableCell14.Append(tableCellProperties14);
             tableCell14.Append(paragraph14);

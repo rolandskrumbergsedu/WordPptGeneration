@@ -12,14 +12,14 @@ namespace WordDocumentGeneration.Helpers
                 new DocumentFormat.OpenXml.ExtendedProperties.Template {Text = "Normal"};
             var totalTime1 =
                 new DocumentFormat.OpenXml.ExtendedProperties.TotalTime {Text = "5"};
-            var pages1 = new DocumentFormat.OpenXml.ExtendedProperties.Pages {Text = "7"};
-            var words1 = new DocumentFormat.OpenXml.ExtendedProperties.Words {Text = "1216"};
-            var characters1 = new DocumentFormat.OpenXml.ExtendedProperties.Characters {Text = "6936"};
+            //var pages1 = new DocumentFormat.OpenXml.ExtendedProperties.Pages {Text = "7"};
+            //var words1 = new DocumentFormat.OpenXml.ExtendedProperties.Words {Text = "1216"};
+            //var characters1 = new DocumentFormat.OpenXml.ExtendedProperties.Characters {Text = "6936"};
             var application1 =
                 new DocumentFormat.OpenXml.ExtendedProperties.Application {Text = "Microsoft Office Word"};
             var documentSecurity1 = new DocumentFormat.OpenXml.ExtendedProperties.DocumentSecurity {Text = "0"};
-            var lines1 = new DocumentFormat.OpenXml.ExtendedProperties.Lines {Text = "57"};
-            var paragraphs1 =
+            //var lines1 = new DocumentFormat.OpenXml.ExtendedProperties.Lines {Text = "57"};
+            //var paragraphs1 =
                 new DocumentFormat.OpenXml.ExtendedProperties.Paragraphs {Text = "16"};
             var scaleCrop1 = new DocumentFormat.OpenXml.ExtendedProperties.ScaleCrop {Text = "false"};
 
@@ -63,13 +63,13 @@ namespace WordDocumentGeneration.Helpers
 
             properties1.Append(template1);
             properties1.Append(totalTime1);
-            properties1.Append(pages1);
-            properties1.Append(words1);
-            properties1.Append(characters1);
+            //properties1.Append(pages1);
+            //properties1.Append(words1);
+            //properties1.Append(characters1);
             properties1.Append(application1);
             properties1.Append(documentSecurity1);
-            properties1.Append(lines1);
-            properties1.Append(paragraphs1);
+            //properties1.Append(lines1);
+            //properties1.Append(paragraphs1);
             properties1.Append(scaleCrop1);
             properties1.Append(headingPairs1);
             properties1.Append(titlesOfParts1);

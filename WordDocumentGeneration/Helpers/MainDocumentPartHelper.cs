@@ -6,7 +6,7 @@ namespace WordDocumentGeneration.Helpers
 {
     public static class MainDocumentPartHelper
     {
-        public static void GenerateMainDocumentPart1Content(MainDocumentPart mainDocumentPart1)
+        public static void GenerateMainDocumentPart1Content(MainDocumentPart mainDocumentPart1, GenerationData data)
         {
             Document document1 = ContentDocument.CreateDocument();
 
@@ -14,14 +14,14 @@ namespace WordDocumentGeneration.Helpers
 
             SectionProperties sectionProperties1 = ContentSectionProperties.CreateProperties();
 
-            body1.Append(ContentTable1.GenerateTable());
+            body1.Append(ContentTable1.GenerateTable(data));
             body1.Append(ContentParagraph1.GenerateParagraph());
-            body1.Append(ContentTable2.GenerateTable());
+            body1.Append(ContentTable2.GenerateTable(data));
             body1.Append(ContentParagraph2.GenerateParagraph());
-            body1.Append(ContentTable3.GenerateTable());
+            body1.Append(ContentTable3.GenerateTable(data));
             body1.Append(ContentParagraph3.GenerateParagraph());
             body1.Append(ContentParagraph4.GenerateParagraph());
-            body1.Append(ContentTable4.GenerateTable());
+            body1.Append(ContentTable4.GenerateTable(data));
             body1.Append(ContentParagraph5.GenerateParagraph());
             body1.Append(ContentTable5.GenerateTable());
             body1.Append(ContentParagraph6.GenerateParagraph());

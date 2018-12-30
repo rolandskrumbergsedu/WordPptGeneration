@@ -6,7 +6,7 @@ namespace WordDocumentGeneration.ContentHelper
     public static class ContentTable2
     {
         // Creates an Table instance and adds its children.
-        public static Table GenerateTable()
+        public static Table GenerateTable(GenerationData data)
         {
             Table table1 = new Table();
 
@@ -107,7 +107,7 @@ namespace WordDocumentGeneration.ContentHelper
             runProperties1.Append(bold2);
             runProperties1.Append(fontSize2);
             Text text1 = new Text();
-            text1.Text = "Company";
+            text1.Text = data.TitleArea.Company;
 
             run1.Append(runProperties1);
             run1.Append(text1);
@@ -121,7 +121,7 @@ namespace WordDocumentGeneration.ContentHelper
             runProperties2.Append(bold3);
             runProperties2.Append(fontSize3);
             Text text2 = new Text() { Space = SpaceProcessingModeValues.Preserve };
-            text2.Text = "– CEO ";
+            text2.Text = " – " + data.TitleArea.Role;
 
             run2.Append(runProperties2);
             run2.Append(text2);
