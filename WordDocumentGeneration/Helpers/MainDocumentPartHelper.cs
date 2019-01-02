@@ -23,11 +23,11 @@ namespace WordDocumentGeneration.Helpers
             body1.Append(ContentParagraph4.GenerateParagraph());
             body1.Append(ContentTable4.GenerateTable(data));
             body1.Append(ContentParagraph5.GenerateParagraph());
-            body1.Append(ContentTable5.GenerateTable());
+            body1.Append(ContentTable5.GenerateTable(data));
             body1.Append(ContentParagraph6.GenerateParagraph());
             body1.Append(ContentParagraph7.GenerateParagraph());
             body1.Append(ContentParagraph8.GenerateParagraph());
-            body1.Append(ContentTable6.GenerateTable());
+            body1.Append(ContentTable6.GenerateTable(data));
             body1.Append(ContentParagraph9.GenerateParagraph());
             body1.Append(ContentParagraph10.GenerateParagraph());
             body1.Append(ContentParagraph11.GenerateParagraph());
